@@ -1,5 +1,6 @@
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
-dunst &
+xfsettingsd & #TOGLIERLO SE SI USA NWG-LOOK OPPURE SI USA XFT.DPI
+dunst & #TOGLIERLO SE SI USA XFCE4-NOTIFYD
 xsetroot -cursor_name left_ptr &
 picom & #disattivare la vsync per sfarfallii
 polybar &
