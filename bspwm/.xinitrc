@@ -1,7 +1,7 @@
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 dunst &
 xsetroot -cursor_name left_ptr &
-picom &
+picom & #disattivare la vsync per sfarfallii
 polybar &
 waypaper --restore &
 xrdb -merge /home/vito/.Xresources
