@@ -1,14 +1,34 @@
+
 #! /bin/sh
 
-pgrep -x sxhkd > /dev/null || sxhkd &
+##########################AUTOSTART###############################################################
+xrandr --output DisplayPort-1 --mode 3840x2160 &  #cambiarlo in caso di output diverso
+bspc monitor -d 1 2   
+sxhkd & 
 
-bspc monitor -d I II III  
+bspc config border_width         4
+bspc config window_gap          15
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config pointer_motion_interval 2           #PER IL REFRESH RATE DELLO SCHERMO [ALZARE IL NUMERO SE SI HA UN MONITOR CON FREQUENZA MINORE]
+bspc config normal_border_color "#1e1e2e"       #COLORE BORDO FINESTRA INATTIVA
+bspc config focused_border_color "#0055b9"      #COLORE BORDO FINESTRA ATTIVA
+bspc config focus_follows_pointer true          #IL FOCUS SEGUE IL MOUSE
+bspc config top_padding 36                      #DISTANZA DA DMENU ALLA FINESTRA
 
 
-bspc config border_width         5
-bspc config window_gap          50
-bspc config focused_border_color "#f38ba8"
-bspc config normal_border_color "#1e1e2e"
-bspc config top_padding          30
+
+
+
+
+
+##################REGOLE######################################################################
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
 
  
